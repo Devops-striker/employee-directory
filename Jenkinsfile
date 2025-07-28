@@ -2,7 +2,7 @@ pipeline {
     agent { label 'workernode' }
 
     tools {
-        maven 'Maven 3.9.6' // 👈 This name must match Jenkins Global Tool config
+        maven 'Maven 3.9.11' // 👈 This name must match Jenkins Global Tool config
     }
 
     environment {
