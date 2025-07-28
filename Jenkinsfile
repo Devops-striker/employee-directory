@@ -1,9 +1,13 @@
 pipeline {
-    agent { label 'workernode' }  // Run on your worker/agent node
+    agent { label 'workernode' }
+
+    tools {
+        maven 'Maven 3.9.6' // 👈 This name must match Jenkins Global Tool config
+    }
 
     environment {
         TOMCAT_USER = 'ubuntu'
-        TOMCAT_HOST = '13.235.133.33'   // Replace this with real IP
+        TOMCAT_HOST = '13.235.133.33'
         TOMCAT_PATH = '/opt/tomcat/webapps'
     }
 
